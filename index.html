@@ -99,68 +99,123 @@
       </div>
     </div><!-- End About Section -->
 
-    <!-- ======= Services Section ======= -->
-    <div id="services">
-      <div class="container">
+    <style>
+      #services {
+          padding: 50px 0;
+          background-color: #f9f9f9;
+      }
+      .services-block {
+          text-align: center;
+          padding: 20px;
+          background: #fff;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .services-block:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+      .services-block i {
+          font-size: 40px;
+          color: #007bff;
+          margin-bottom: 15px;
+          transition: color 0.3s ease;
+      }
+      .services-block:hover i {
+          color: #0056b3;
+      }
+      .services-block span {
+          display: block;
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 10px;
+          color: #333;
+      }
+      .separator {
+          font-size: 14px;
+          color: #777;
+      }
+      .swiper-pagination-bullet {
+          background: #007bff;
+          opacity: 1;
+      }
+      .swiper-pagination-bullet-active {
+          background: #0056b3;
+      }
+  </style>
+</head>
+<body>
 
-        <div class="services-slider swiper" data-aos="fade-up" data-aos-delay="100">
+<div id="services">
+  <div class="container">
+      <div class="services-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="services-block">
-                <i class="bi bi-briefcase"></i>
-                <span>Full Stack Sotware Developer</span>
-                <p class="separator">Passionate about software development and coding itself ,designing websites ,apps etc </p>
+              <div class="swiper-slide">
+                  <div class="services-block">
+                      <i class="bi bi-briefcase"></i>
+                      <span>Full Stack Software Developer</span>
+                      <p class="separator">Passionate about software development and coding, designing websites, apps, etc.</p>
+                  </div>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="services-block">
-                <i class="bi bi-card-checklist"></i>
-                <span>Adminstrator</span>
-                <p class="separator">Where it comes to admin im capable of doing anything from data capturing to working with inventory. </p>
+              <div class="swiper-slide">
+                  <div class="services-block">
+                      <i class="bi bi-card-checklist"></i>
+                      <span>Administrator</span>
+                      <p class="separator">Capable of anything from data capturing to working with inventory.</p>
+                  </div>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="services-block">
-                <i class="bi bi-bar-chart"></i>
-                <span>Support Systems Operator</span>
-                <p class="separator">Tech Support is one of my strengths i love working with computers and tech in general ! </p>
+              <div class="swiper-slide">
+                  <div class="services-block">
+                      <i class="bi bi-bar-chart"></i>
+                      <span>Support Systems Operator</span>
+                      <p class="separator">Tech support is one of my strengths. I love working with computers and tech in general!</p>
+                  </div>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="services-block">
-                <i class="bi bi-binoculars"></i>
-                <span>Business Mangement</span>
-                <p class="separator">Managing a business comes with a lot of responsibility,however im fully equipped to manage any type of business. </p>
+              <div class="swiper-slide">
+                  <div class="services-block">
+                      <i class="bi bi-binoculars"></i>
+                      <span>Business Management</span>
+                      <p class="separator">Equipped to manage any type of business with responsibility and efficiency.</p>
+                  </div>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="services-block">
-                <i class="bi bi-brightness-high"></i>
-                <span>Networking</span>
-                <p class="separator">To be able to interact with people from different fields or background amazes me! </p>
+              <div class="swiper-slide">
+                  <div class="services-block">
+                      <i class="bi bi-brightness-high"></i>
+                      <span>Networking</span>
+                      <p class="separator">Interacting with people from different fields or backgrounds amazes me!</p>
+                  </div>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="services-block">
-                <i class="bi bi-calendar4-week"></i>
-                <span>PHOTOGRAPHY</span>
-                <p class="separator">Being able to capture every moment and making it last for a lifetime ! </p>
+              <div class="swiper-slide">
+                  <div class="services-block">
+                      <i class="bi bi-calendar4-week"></i>
+                      <span>Photography</span>
+                      <p class="separator">Capturing every moment and making it last a lifetime!</p>
+                  </div>
               </div>
-            </div>
-
           </div>
           <div class="swiper-pagination"></div>
-        </div>
-
       </div>
+  </div>
+</div>
 
-    </div><!-- End Services Section -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      var swiper = new Swiper('.swiper-container', {
+          loop: true,
+          pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+          },
+          autoplay: {
+              delay: 5000,
+              disableOnInteraction: false,
+          },
+      });
+  });
+</script>
+
 
     <!-- ======= Portfolio Section ======= -->
     <div id="portfolio" class="paddsection">
@@ -187,8 +242,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <img src="assets/img/Screenshot 2024-05-27 140231.png" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
+              <h4>SneakyKleen</h4>
+              <p>HTML,CSS,JavaScript</p>
               <a href="assets/img/Screenshot 2024-05-27 140231.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -197,8 +252,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <img src="assets/img/2024-05-22.png" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
+              <h4>Tinka Bank</h4>
+              <p>Python</p>
               <a href="assets/img/2024-05-22.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -207,8 +262,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <img src="assets/img/portfolio/Screenshot 2024-05-27 135956.png" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
+              <h4>WalkingOnAirs!</h4>
+              <p>HTML,CSS,JavaScript</p>
               <a href="assets/img/portfolio/Screenshot 2024-05-27 135956.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -217,8 +272,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <img src="assets/img/portfolio/Screenshot 2024-05-27 135501.png" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
+              <h4>Otaku Pulse</h4>
+              <p>HTML,CSS,JavaScript</p>
               <a href="assets/img/portfolio/Screenshot 2024-05-27 135501.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -227,8 +282,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <img src="assets/img/Screenshot 2024-05-08 112953.png" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
+              <h4>SlayByJ</h4>
+              <p>HTML,CSS,JavaScript</p>
               <a href="assets/img/Screenshot 2024-05-08 112953.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -243,43 +298,68 @@
     
 
 <!-- ======= Skills Section ======= -->
+<style>
+  .highlight {
+      background-color: #f0f8ff;
+      transition: background-color 0.3s ease;
+  }
+</style>
+</head>
+<body>
 <section id="skills" class="paddsection">
   <div class="container">
-    <div class="section-title text-center">
-      <h2>Skills</h2>
-    </div>
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="skill-item">
-          <h3>Frontend Development</h3>
-          <p>Proficient in HTML, CSS, JavaScript, and various frontend frameworks such as React.</p>
-        </div>
-        <div class="skill-item">
-          <h3>Backend Development</h3>
-          <p>Experience with server-side technologies including Node.js, Express and Python.</p>
-        </div>
-        <!-- Add more skill items as needed -->
+      <div class="section-title text-center">
+          <h2>Skills</h2>
       </div>
-      <div class="col-lg-6">
-        <div class="skill-item">
-          <h3>UI/UX Design</h3>
-          <p>Skilled in creating intuitive and visually appealing user interfaces using design tools such as tkinter and gui.</p>
-        </div>
-        <div class="skill-item">
-          <h3>Project Management</h3>
-          <p>Effective at managing project timelines, resources, and stakeholders to ensure successful project delivery.</p>
-        </div>
-        <!-- Add more skill items as needed -->
+      <div class="row">
+          <div class="col-lg-6">
+              <div class="skill-item">
+                  <h3>Frontend Development</h3>
+                  <p>Proficient in HTML, CSS, JavaScript, and various frontend frameworks such as React.</p>
+              </div>
+              <div class="skill-item">
+                  <h3>Backend Development</h3>
+                  <p>Experience with server-side technologies including Node.js, Express, Python, and Java.</p>
+              </div>
+              <!-- Add more skill items as needed -->
+          </div>
+          <div class="col-lg-6">
+              <div class="skill-item">
+                  <h3>UI/UX Design</h3>
+                  <p>Skilled in creating intuitive and visually appealing user interfaces using design tools such as Figma and Sketch.</p>
+              </div>
+              <div class="skill-item">
+                  <h3>Project Management</h3>
+                  <p>Effective at managing project timelines, resources, and stakeholders to ensure successful project delivery.</p>
+              </div>
+              <!-- Add more skill items as needed -->
+          </div>
       </div>
-    </div>
   </div>
 </section>
-<!-- End Skills Section -->
 
-<!-- ======= Custom JavaScript ======= -->
 <script>
-  // Add any custom JavaScript here
+  document.addEventListener('DOMContentLoaded', function () {
+      const skillItems = document.querySelectorAll('.skill-item');
+
+      skillItems.forEach(item => {
+          item.addEventListener('mouseenter', function () {
+              item.classList.add('highlight');
+          });
+
+          item.addEventListener('mouseleave', function () {
+              item.classList.remove('highlight');
+          });
+
+          item.addEventListener('click', function () {
+              alert('You clicked on ' + item.querySelector('h3').innerText);
+          });
+      });
+  });
 </script>
+</body>
+</html>
+
 
 <!-- ======= Custom CSS ======= -->
 <style>
