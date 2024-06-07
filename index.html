@@ -98,7 +98,6 @@
         </div>
       </div>
     </div><!-- End About Section -->
-
     <style>
       #services {
           padding: 50px 0;
@@ -143,79 +142,78 @@
       .swiper-pagination-bullet-active {
           background: #0056b3;
       }
-  </style>
-</head>
-<body>
-
-<div id="services">
-  <div class="container">
-      <div class="services-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                  <div class="services-block">
-                      <i class="bi bi-briefcase"></i>
-                      <span>Full Stack Software Developer</span>
-                      <p class="separator">Passionate about software development and coding, designing websites, apps, etc.</p>
-                  </div>
-              </div>
-              <div class="swiper-slide">
-                  <div class="services-block">
-                      <i class="bi bi-card-checklist"></i>
-                      <span>Administrator</span>
-                      <p class="separator">Capable of anything from data capturing to working with inventory.</p>
-                  </div>
-              </div>
-              <div class="swiper-slide">
-                  <div class="services-block">
-                      <i class="bi bi-bar-chart"></i>
-                      <span>Support Systems Operator</span>
-                      <p class="separator">Tech support is one of my strengths. I love working with computers and tech in general!</p>
-                  </div>
-              </div>
-              <div class="swiper-slide">
-                  <div class="services-block">
-                      <i class="bi bi-binoculars"></i>
-                      <span>Business Management</span>
-                      <p class="separator">Equipped to manage any type of business with responsibility and efficiency.</p>
-                  </div>
-              </div>
-              <div class="swiper-slide">
-                  <div class="services-block">
-                      <i class="bi bi-brightness-high"></i>
-                      <span>Networking</span>
-                      <p class="separator">Interacting with people from different fields or backgrounds amazes me!</p>
-                  </div>
-              </div>
-              <div class="swiper-slide">
-                  <div class="services-block">
-                      <i class="bi bi-calendar4-week"></i>
-                      <span>Photography</span>
-                      <p class="separator">Capturing every moment and making it last a lifetime!</p>
-                  </div>
-              </div>
-          </div>
-          <div class="swiper-pagination"></div>
-      </div>
+    </style>
+  </head>
+  <body>
+  
+  <div id="services">
+    <div class="container">
+        <div class="services-slider swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="services-block">
+                        <i class="bi bi-briefcase"></i>
+                        <span>Full Stack Software Developer</span>
+                        <p class="separator">Passionate about software development and coding, designing websites, apps, etc.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="services-block">
+                        <i class="bi bi-card-checklist"></i>
+                        <span>Administrator</span>
+                        <p class="separator">Capable of anything from data capturing to working with inventory.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="services-block">
+                        <i class="bi bi-bar-chart"></i>
+                        <span>Support Systems Operator</span>
+                        <p class="separator">Tech support is one of my strengths. I love working with computers and tech in general!</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="services-block">
+                        <i class="bi bi-binoculars"></i>
+                        <span>Business Management</span>
+                        <p class="separator">Equipped to manage any type of business with responsibility and efficiency.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="services-block">
+                        <i class="bi bi-brightness-high"></i>
+                        <span>Networking</span>
+                        <p class="separator">Interacting with people from different fields or backgrounds amazes me!</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="services-block">
+                        <i class="bi bi-calendar4-week"></i>
+                        <span>Photography</span>
+                        <p class="separator">Capturing every moment and making it last a life time!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
   </div>
-</div>
-
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-      var swiper = new Swiper('.swiper-container', {
-          loop: true,
-          pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-          },
-          autoplay: {
-              delay: 5000,
-              disableOnInteraction: false,
-          },
-      });
-  });
-</script>
-
+  
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var swiper = new Swiper('.swiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+        });
+    });
+  </script>
 
     <!-- ======= Portfolio Section ======= -->
     <div id="portfolio" class="paddsection">
